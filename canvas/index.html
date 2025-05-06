@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJETO CANVAS</title>
+
+    <script>
+        function Desenhar1()
+        {
+            //iniciar desenho
+            x = document.getElementById ('exemplo1').getContext('2d');
+            x.beginPath();
+            //define a cor do desenho
+            x.fillStyle = "rgb(255,0, 255)";
+            x.fillRect (10, 10, 100, 100);
+            x.closePath();
+        }
+        function Desenhar2()
+        {
+            //iniciar desenho
+            x = document.getElementById ('exemplo1').getContext('2d');
+            x.beginPath();
+            //define a cor do desenho
+            x.arc(200, 130, 75, 0, 2 * Math.PI);
+            x.stroke();
+        }
+        function Desenhar3()
+        {
+            x = document.getElementById("exemplo1").getContext('2d');
+            x.fillStyle = "blue";
+            x.beginPath();
+            x.moveTo(300, 150);
+            x.lineTo(290,180);
+            x.lineTo(260,180);
+            x.lineTo(280,200);
+            x.lineTo(270,230);
+            x.lineTo(300,210);
+            x.lineTo(330,230);
+            x.lineTo(320,200);
+            x.lineTo(340,180);
+            x.lineTo(310,180);
+            x.fill();
+        }
+        function Desenhar4()
+        {
+            //iniciar desenho
+            x = document.getElementById ('exemplo1').getContext('2d');
+            x.beginPath();
+            //define a cor do desenho
+            x.fillStyle = "green";
+            x.fillRect (0, 0, 800, 800);
+            x.closePath();
+
+            x = document.getElementById("exemplo1").getContext('2d');
+            x.fillStyle = "yellow";
+            x.beginPath();
+            x.moveTo(300, 150);
+            x.lineTo(290,180);
+            x.lineTo(260,180);
+            x.lineTo(280,200);
+            x.lineTo(270,230);
+            x.lineTo(300,210);
+            x.lineTo(330,230);
+            x.lineTo(320,200);
+            x.lineTo(340,180);
+            x.lineTo(310,180);
+            x.fill();
+        }
+        function Limpar()
+        {
+            x = document.getElementById ('exemplo1').getContext('2d');
+            x.clearRect(0, 0, exemplo1.width, exemplo1.height);
+        }
+    </script>
+</head>
+<body>
+    
+    <strong>USANDO CANVAS</strong>
+    <br>
+
+    Recurso novo incorporando ao HTML 5 que possibilita trabalhar com desenhos vetoriais.
+    O objeto oferece uma área de desenho 2D para voce utilizar desenhor inclusive utilizando JavaScript junto.
+    <h1>Veja alguns exemplos</h1>
+
+    
+    <canvas id="exemplo1" name="exemplo1" width="600" height="400" style="border: 1px solid black;" ></canvas>
+    <br><br>
+
+    <button onclick="Desenhar1()">Desenhar</button>
+    <button onclick="Desenhar2()">Desenhar</button>
+    <button onclick="Desenhar3()">Desenhar</button>
+    <button onclick="Desenhar4()">Desenhar</button>
+    <button onclick="Limpar()">Limpar</button>
+    
+</body>
+</html>
